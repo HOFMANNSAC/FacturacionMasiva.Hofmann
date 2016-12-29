@@ -51,6 +51,21 @@ namespace FacturacionMasiva.Hofmann
                 {
                     cn.Open();
 
+
+                    SqlCommand cmx = new SqlCommand("select count(*) from soshipheader where ordnbr='" + dgvPicking.Rows[i].Cells[0].Value.ToString() + "' and invcnbr=''");
+                    int flagg = Convert.ToInt32(cmx.ExecuteScalar());
+
+                    if (flagg==0)
+                    {
+
+                        dgvFacturas.Rows.Add(dgvPicking.Rows[i].Cells[0].Value.ToString(), "Picking ya Facturado!");
+
+                        continue;
+                    }
+
+
+
+
                     SqlCommand cm = new SqlCommand("exec xsp_LE_Obtener_Correlativo 'FEL','DHOFMANN'", cn);
                     int correlativo = Convert.ToInt32(cm.ExecuteScalar());
 
