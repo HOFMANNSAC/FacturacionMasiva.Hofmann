@@ -33,13 +33,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
+            this.Picking = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnOpenExcel = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnCargarExcel = new System.Windows.Forms.Button();
-            this.Picking = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPicking)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             // btnProcesar
             // 
-            this.btnProcesar.Location = new System.Drawing.Point(268, 232);
+            this.btnProcesar.Location = new System.Drawing.Point(253, 252);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(95, 61);
             this.btnProcesar.TabIndex = 1;
@@ -99,6 +99,18 @@
             this.dgvFacturas.ReadOnly = true;
             this.dgvFacturas.Size = new System.Drawing.Size(299, 411);
             this.dgvFacturas.TabIndex = 1;
+            // 
+            // Picking
+            // 
+            this.Picking.HeaderText = "Picking";
+            this.Picking.Name = "Picking";
+            this.Picking.ReadOnly = true;
+            // 
+            // Factura
+            // 
+            this.Factura.HeaderText = "Factura";
+            this.Factura.Name = "Factura";
+            this.Factura.ReadOnly = true;
             // 
             // label4
             // 
@@ -145,18 +157,6 @@
             this.btnCargarExcel.Text = "Cargar Excel";
             this.btnCargarExcel.UseVisualStyleBackColor = true;
             this.btnCargarExcel.Click += new System.EventHandler(this.btnCargarExcel_Click);
-            // 
-            // Picking
-            // 
-            this.Picking.HeaderText = "Picking";
-            this.Picking.Name = "Picking";
-            this.Picking.ReadOnly = true;
-            // 
-            // Factura
-            // 
-            this.Factura.HeaderText = "Factura";
-            this.Factura.Name = "Factura";
-            this.Factura.ReadOnly = true;
             // 
             // Form1
             // 
